@@ -1,0 +1,27 @@
+IaC is a code(human readable ) that deploys your inrastructure resource onto various platforms
+instead of managing them manually through a user interface.
+
+Provisioning infrasturcture through software to achieve conistent and predicatble environment.
+
+Why terraform?
+
+1. No more clicks
+2. Enable DevOps
+3. Declarative Infrasture 
+4. Speed, cost and reduce risk
+5. Supports various private and public cloud vendors
+6. Idempotent (Automatically tracks the state of resource deployed)
+7. Consistent Infrastructure
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+https://docker.practicetestgeeks.com/docker-software/?gclid=EAIaIQobChMIi4HCg4y6-gIVwtPtCh2QxQmfEAMYAiAAEgKnvvD_BwE
+
+az login
+PS C:\Terraform> az account set --subscription "c6c903ab-586f-411d-b16e-ffa16e457694"
+
+--Crate a Service principle
+A Service Principal is an application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the <SUBSCRIPTION_ID> with the subscription ID you specified in the previous step.
+
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscription/c6c903ab-586f-411d-b16e-ffa16e457694"
